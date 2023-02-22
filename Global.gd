@@ -2,7 +2,7 @@ extends Node
 
 var level = 1.0
 var score = 0
-var lives = 6 
+var lives = 3
 
 func _ready():
 	randomize()
@@ -12,7 +12,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_pressed("menu"):	
 		get_tree().quit()
-	level = clamp(level, 0.0, 6.0)
+	level = clamp(level, 0.0, 3.0)
 	
 func change_score(s):
 	score += s
